@@ -7,11 +7,13 @@ if (isset($_SESSION['user_id'])) {
   header('Location: profile.php');
   exit();
 }
+
+
 if (isset($_POST['submit'])) {
 
   // Get the username and password from the POST request.
-  $username = $POST['username'];
-  $password = $POST['password'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
 
   // Validate the inputs
   $errors = array();
@@ -73,7 +75,7 @@ if (isset($_POST['submit'])) {
             </ul>
         <?php endif; ?>
 
-        <form method="post" action="">
+        <form method="POST" action="">
             <div>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" >

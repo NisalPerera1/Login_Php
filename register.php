@@ -3,9 +3,9 @@ require_once "dbconfig.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Validate user input
-  $name = trim($POST['name']);
-  $email = trim($POST['email']);
-  $password = trim($POST['password']);
+  $name = trim($_POST['name']);
+  $email = trim($_POST['email']);
+  $password = trim($_POST['password']);
 
   // Validate input
   $errors = array();
