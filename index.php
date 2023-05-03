@@ -3,10 +3,15 @@
 <html>
 <body>
 
-<h4 class= "para" >Welcome to the Index Page</h4>
 
 <?php 
 require_once 'functions.php';
+require_once "header.php";
+?>
+
+<h4 class= "para" >Welcome to the Index Page</h4>
+
+<?php 
 
 if (isloggedin()) {
   // user is logged in, allow access to page

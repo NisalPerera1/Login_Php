@@ -1,5 +1,6 @@
 <?php
 require_once "dbconfig.php";
+require_once "header.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Validate user input
@@ -40,24 +41,50 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $error = implode('<br>', $errors);
   }
 }
+
 ?>
 <html>
 <head>
   <title>Registration Page</title>
+  <style>
+    .form-container {
+      width: 50%;
+      margin: 0 auto;
+    }
+    h4 {
+    text-align: center;
+  }
+  </style>
 </head>
 <body>
-  <h1>Register</h1>
+  <h4 text-align="center">Register</h4>
   <?php if (isset($error)): ?>
     <div><?php echo $error ?></div>
   <?php endif; ?>
-  <form method="post">
-    <label>Name:</label><br>
-    <input type="text" name="name"><br>
-    <label>Email:</label><br>
-    <input type="email" name="email"><br>
-    <label>Password:</label><br>
-    <input type="password" name="password"><br>
-    <input type="submit" value="Register">
-  </form>
+
+  <div class="form-container">
+    <form method="post">
+      <div class="form-group">
+        <label for="Username" name="username">User Name:</label>
+        <input type="text" class="form-control"  name="name"><br>
+
+        <div class="form-group">
+          <label for="Email" name="email">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="Password">Password</label>
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1"><br>
+
+          <input class="btn btn-primary" type="submit" value="Register">
+        </div>
+      </div>
+    </form>
+    <p class= "para">Already have an account? <a href="login.php">Login Here</a>.</p>
+
+  </div>
 </body>
 </html>
+

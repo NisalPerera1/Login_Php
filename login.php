@@ -1,5 +1,5 @@
 <?php
-
+require_once "header.php";
 session_start();
 
 // Check if the user is already logged in.then reredirect
@@ -63,28 +63,43 @@ if (isset($_POST['submit'])) {
 <html>
     <head>
         <title>Login</title>
-        <link rel="stylesheet" href="styles.css">
+ <style>
+    .form-container {
+      width: 50%;
+      margin: 0 auto;
+    }
+    h4 {
+    text-align: center;
+  }
+    </style>
 
     </head>
     <body>
+        <h4 text-align="center">Enter Your Credintials</h4>
         <?php if (isset($errors)): ?>
-            <ul>
-                <?php foreach ($errors as $error): ?>
-                    <li><?php echo $error; ?></li>
-                <?php endforeach; ?>
-            </ul>
+
+        <ul>
+        <?php foreach ($errors as $error): ?>
+        <li><?php echo $error; ?></li>
+        <?php endforeach; ?>
+        </ul>
+
         <?php endif; ?>
 
+         <div class="form-container">
         <form method="POST" action="">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" >
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-            </div>
-            <button type="submit">Login</button>
+
+        <div class="form-group">
+        <label for="Username" name="username">User Name:</label>
+        <input type="text" class="form-control"  name="name"><br>
+
+        <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1"><br>
+
+          <input class="btn btn-primary" type="submit" value="login">
+        </div>
+      </div>
         </form>
         <p class= "para">Don't have an account? <a href="register.php">Register here</a>.</p>
     </body>
