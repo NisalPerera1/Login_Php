@@ -13,4 +13,9 @@ if (!isset($_SESSION['user_id'])) {
 // The user is logged in, so show their profile.
 echo '<p>Welcome, ' . $_SESSION['username'] . '!</p>';
 
+
+
+
+
+
 ?>
