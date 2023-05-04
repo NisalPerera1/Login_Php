@@ -26,27 +26,35 @@ require_once "logout.php";
         .nav-link {
             display: inline-block; /* Set the display property of the links in the navbar to inline-block */
         }
+        li.nav-item {
+        list-style: none;
+    }
+
+    
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md">
-        <div class="container">
-        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+<nav class="navbar navbar-expand-md">
+    <div class="container">
+    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="test.php">Test</a></li>
 
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        User
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="profile.php">Profile</a>
-                        <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target=".modal">Logout</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    User
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="profile.php">Profile</a>
+                    <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target=".modal">Logout</a>
 
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

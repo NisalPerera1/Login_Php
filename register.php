@@ -81,6 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
       </div>
       </form>
+      <p class= "para">Already have an account? <a href="login.php">Sign In</a>.</p>
+
 </body>
 </html>
 

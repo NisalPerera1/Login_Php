@@ -22,17 +22,32 @@ if (isloggedin()) {
   // user is not logged in, redirect to login page
   echo "You have to log in First!!";
 ?>
-<div class="card text-center">
-  <div class="card-header">
-  Welcome to the Index Page
-  </div>
+<div class="jumbotron jumbotron-fluid" >
+             <div class="container">
+             <h1 class="display-4">This is Index Page</h1>
+             <div class="card-body">
 
+  <div class="card">
+  <div class="card-header">
+   Sign In or Sign Up
+  </div>
   <div class="card-body">
     <h5 class="card-title">Before Access the Index Page You have to login First</h5>
-    <p class="para">Already Have an Account? <a href="login.php">Login here</a>.</p>
-  <p class="para">Don't Have an Account? <a href="register.php">Register here</a>.</p>
+    <p class="card-text">Already Have an Account?</p>
+    <a href="login.php" class="btn btn-primary">Login</a>
   </div>
+</div>
 
+<div class="card">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <p class="card-text">Dont Have an Account?</p>
+    <a href="register.php" class="btn btn-primary">Register</a>
+  </div>
+</div>        
+
+             
   <!-- <div class="card-footer text-muted">
     2 days ago
   </div> -->
