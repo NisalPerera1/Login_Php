@@ -1,6 +1,5 @@
 <?php
 
-// This is the profile page.
 
 // Check if the user is logged in.
 if (!isset($_SESSION['user_id'])) {
@@ -10,11 +9,9 @@ if (!isset($_SESSION['user_id'])) {
   exit();
 }
 
-// The user is logged in, so show their profile.
-echo '<p>Welcome, ' . $_SESSION['username'] . '!</p>';
 
-
-
+$username = $_SESSION['username'];
+echo '<h1>Welcome, ' . $username . '! You have Successfully Loged in </h1>';
 
 
 

@@ -61,30 +61,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <?php if (isset($error)): ?>
     <div><?php echo $error ?></div>
   <?php endif; ?>
-
   <div class="form-container">
-    <form method="post">
-      <div class="form-group">
-        <label for="Username" name="username">User Name:</label>
+
+  <form method="post">
+  
+    <div class="form-group">
+        <label for="Username" name="name">User Name:</label>
         <input type="text" class="form-control"  name="name"><br>
 
         <div class="form-group">
-          <label for="Email" name="email">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
+        <label for="email" name="email">User Name:</label>
+        <input type="email" class="form-control"  name="email"><br>
 
         <div class="form-group">
-          <label for="Password">Password</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword1"><br>
+        <label for="Password">Password</label>
+        <input type="password" name="password" class="form-control" id="password"><br>
 
-          <input class="btn btn-primary" type="submit" value="Register">
+        <input class="btn btn-primary" type="submit" value="register">
         </div>
       </div>
-    </form>
-    <p class= "para">Already have an account? <a href="login.php">Login Here</a>.</p>
-
-  </div>
+      </form>
 </body>
 </html>
 

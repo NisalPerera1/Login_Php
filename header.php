@@ -1,66 +1,57 @@
+<?php
+require_once "logout.php";
+?>
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Login App</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <style>
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #333;
-            }
+<head>
+    <title>Login App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        nav {
+            background-color: #333; /* Change the background color of the navbar */
+        }
+        nav a {
+            color: #fff; /* Change the text color of the links in the navbar */
+        }
+        nav a:hover {
+            background-color: #555; /* Change the background color of the links when hovered */
+        }
+        .dropdown-menu {
+            z-index: 999; /* Add a high z-index to the dropdown menu */
+        }
+        .dropdown-item:hover {
+            background-color: #555; /* Change the background color of the dropdown items when hovered */
+        }
+        .nav-link {
+            display: inline-block; /* Set the display property of the links in the navbar to inline-block */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 
-            li {
-                float: left;
-            }
-
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-            li a:hover:not(.active) {
-                background-color: #111;
-            }
-
-            .active {
-                background-color: #04AA6D;
-            }
-        </style>
-    </head>
-    <body>
-
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li style="float:right">
-                <div class="dropdown">
-                    <button type="button" class="btn btn-info dropdown-toggle tx #111" data-toggle="dropdown" aria-expanded="false">User</button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="profile.php">Profile</a>
-                        <a class="dropdown-item" href="logout.php">Logout</a>
+                        <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target=".modal">Logout</a>
+
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-q8i/X+965D7SIkFdL4zs4T9jy5nVGzoFq5/KW8+IvI92RUVxMWrOoC1c4O7v9XaB" crossorigin="anonymous"></script>
-
-        <script>
-            $(document).ready(function() {
-                $('.dropdown-toggle').dropdown();
-            });
-        </script>
-
-    </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
 </html>
